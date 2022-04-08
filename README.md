@@ -3,6 +3,9 @@ Welcome to the GitHub page for Lion Airlines! Please use the dedicated Slack cha
 
 *** 
 
+## What is Lion Airlines?
+Lion Airlines is dedicated to providing safe and quality travel to our customers and have been doing so since we were established in 2022 by Generation Australia Ltd. Please visit our website at https://jordansosa.github.io/lion-airlines/
+
 ## How to contribute with Git
 1. Clone the git repository to create a local repo.
 2. CD into that local repo folder and use git branch to create your own branch.
