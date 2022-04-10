@@ -82,9 +82,6 @@ function validateForm() {
     const age_p1 = document.getElementById("age-p1");
     const age_p2 = document.getElementById("age-p2");
     const age_p3 = document.getElementById("age-p3");
-    const passenger_p1 = document.getElementById("passenger-p1");
-    const passenger_p2 = document.getElementById("passenger-p2");
-    const passenger_p3 = document.getElementById("passenger-p3");
     const cc_expdate = document.getElementById("cc-expdate");
     const cc_cvv = document.getElementById("cc-cvv");
     const return_trip = document.querySelector('input[name="tripstyle"]:checked').value;
