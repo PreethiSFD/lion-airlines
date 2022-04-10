@@ -1,46 +1,22 @@
 body {
+    padding: 0;
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 40px 1fr;
     height: 100vh;
     width: 100vw;
+    background-color:beige;
 }
 
-header {
+.header{
     grid-row: 1 / 2;
     grid-column: 1 / 3;
+    background-color: aliceblue;
     text-align: center;
-	background-color: #2196F3;
-}
-
-
-.navbar {
-  display: block;
 }
 
 li {
     display: inline;
-    padding: 0px 3vw;
-}
-
-.brand-image {
-    grid-row: 2 / 5;
-    grid-column: 1 / 2;
-	background-image: url("./imgs/banner-bg.jpg");
-
-}
-
-.smart-wrap {
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-	background-color: grey;
-}
-
-.brand-image {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-}
-
-.passenger {
-  float:left;
+    padding: 0 5vw;
 }

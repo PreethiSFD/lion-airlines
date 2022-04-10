@@ -1,173 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title> Flight booking form </title>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Flight Booking Form</title>
     <link rel="stylesheet" type="text/css" href="./style.css"/>
-  <body>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
     <header class="header">
-      <nav class="navbar">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Booking</li>
-          <li>Contact Us</li>
-        </ul>
-      </nav>
-    </header>
-  
-    <!--INSERT THE BRAND IMAGE/LOGO HERE-->
-    <div class="brand-image">
-
-    </div>
+        <nav class="navbar">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Booking</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+    </header> 
     
-    <!-- OUR BOOKING FORM MARKUP -->
-    <div class="smart-wrap">
-    
-            <h4>MAKE A BOOKING</h4>
-           
-          <form method="post" action="/" id="booking-form">
-            <div class="container-sm">
-             
-             <!-- OUR FORM ELEMENTS WILL GO HERE -->
-             <div > 
-  				<label for="oneway">One way</label>
-				<input type="radio" id="oneway" name="oneway" value="One way">
-				<label for="roundtrip">Round trip</label>
-				<input type="radio" id="roundtrip" name="roundtrip" value="Round trip">
-             </div>
-  			 
-             <div class="section">
-                <label for="passengername" class="field prepend-icon"> Name:</label>
-                  <input type="text" name="passengername" id="passengername" required="" placeholder="Full name">
-              </div>
-			  
-              <!-- container to hold Phone and email -->               
-              <div class="mb-2">
-                  <label for="Passengeremail" class="field-label">Email:</label>
-                    <input type="email" name="Passengeremail" id="Passengeremail" required="" placeholder="Email ID">
-                  <label for="Passengertelephone" class="field-label">Phone:</label>
-                    <input type="text" name="Passengertelephone" id="Passengertelephone" required="" placeholder="Contact Number">
-              </div>
-			  
-			   
-			  <!-- container to hold TextArea -->  
-              <div class="form-row">
-                  <label class="icon" for="address">Address:</label>
-                 <input type="text" name="address" id="address" placeholder="Enter address" required/> 
-              </div>
-			  
-               <!-- container to hold Pats -->  
-              <div class="form-row">
-                  <label for="adults" class="field-label">Number of Adults:</label>
-                    <input type="number" id="adults" name="adults" required="" placeholder="Number of adults">
-                 
-                  <label for="children" class="field-label">Number of Children:</label>
-                    <input type="number" id="children" name="children" required="" placeholder="Number of children">
-              </div>
-			 
-               <!-- container to hold Dates -->
-              <div class="form-row">
-                  <label for="Departure date" class="field-label">Check-in Date:</label>
-                    <input type="text" id="checkin" name="checkin" required="" placeholder="mm/dd/yyyy">
-                  <label for="Arrival" class="field-label">Check-out date:</label>
-                  <label for="checkout" class="field prepend-icon">
-                    <input type="text" id="checkout" name="checkout" required="" placeholder="mm/dd/yyyy">
-              </div>
+    <!-- HERO IMAGE / LOGO -->
+    <section class="hero-image-container">
 
-			   <!-- container to hold Destination locations -->
-              <div class="form-row">
-                  <label for="fromLoc" class="field-label">From Destination:</label>
-                    <input type="text" id="fromLoc" name="fromLoc" required="" placeholder="From">
-                  <label for="toLoc" class="field-label">To Destination:</label>
-                  <label for="toLoc" class="field prepend-icon">
-                    <input type="text" id="toLoc" name="toLoc" required="" placeholder="To">
-				<!-- End container to hold Destination locations -->	
-              </div>
-			  
-			   <!-- container to hold Passengers details-->
-              <div class="form-row">
-			    <h3>Passengers:</h3>
-				
-				<div class="passenger">
-				 <label class="icon" for="passenger1">P1:</label>
-                 <input type="text" name="passenger1" id="passenger1" placeholder="Full name as per passport" required=""/>
-				 <div>
-				 <label>Gender:</label>
-				 <label for="p1gender1">M</label>
-				<input type="radio" id="p1gender1" name="p1gender" value="Male">
-				<label for="p1gender2">F</label>
-				<input type="radio" id="p1gender2" name="p1gender" value="Female">
-				 </div>
-				 <label class="icon" for="p1age">Age:</label>
-                 <input type="text" name="p1age" id="p1age" placeholder="Age" required=""/>
-				</div>
-				
-				<div class="passenger">
-				 <label class="icon" for="passenger2">P2:</label>
-                 <input type="text" name="passenger2" id="passenger2" placeholder="Full name as per passport" required=""/>
-				  <div>
-				 <label>Gender:</label>
-				 <label for="p2gender1">M</label>
-				<input type="radio" id="p2gender1" name="p2gender" value="Male">
-				<label for="p2gender2">F</label>
-				<input type="radio" id="p2gender2" name="p2gender" value="Female">
-				 </div>
-				 <label class="icon" for="p2age">Age:</label>
-                 <input type="text" name="p2age" id="p2age" placeholder="Age" required=""/>
-				</div>
-				
-				<div class="passenger">
-				 <label class="icon" for="passenger3">P3:</label>
-                 <input type="text" name="passenger3" id="passenger3" placeholder="Full name as per passport" required=""/>
-				  <div>
-				 <label>Gender:</label>
-				 <label for="p3gender1">M</label>
-				<input type="radio" id="p3gender1" name="p3gender" value="Male">
-				<label for="p3gender2">F</label>
-				<input type="radio" id="p3gender2" name="p3gender" value="Female">
-				 </div>
-				 <label class="icon" for="p3age">Age:</label>
-                 <input type="text" name="p3age" id="p3age" placeholder="Age" required=""/>
-				</div>
-              <!-- End container to hold Passengers details-->
-			  </div>
-			</br></br></br></br>
+    </section>
 
- <!-- Container to hold Meals -->
-              <div class="form-row">
-			  <label for="meals">Meals:</label>
-                <div>
-				   <select name="meals" id="meals">
-                     <option value="veg">Veg meals</option>
-                     <option value="nveg">Non-veg meals</option>
-                     <option value="asaian">Asian meals</option>
-                     <option value="vegan">Vegan meals</option>
-					 <option value="infant">Infant meals</option>
-                   </select>
-				</div>
-				<!--End Container to hold Meals -->
-              </div>
-			  
-			  <div class="form-row">
-			  <label for="paymentid">Payment Type / Information:</label>
-			    <div >
-				<textarea id="paymentid" name="paymentid" rows="4" cols="50"></textarea>
-				</div>
-            </div>
-             
-            <div class="form-footer">
-              <button type="submit" class="button btn-primary">Submit</button>
-            </div>
-             
-          </div>
-		  </form>
-          
-      </div>
-    </div> 
+    <!-- BOOKING FORM -->
+    <section class="form-container">
+        <h4>MAKE A BOOKING</h4>
+        <form method="post" action="/" id="booking-form" onsubmit="return false">
+
+            <!-- TRIP STYLE -->
+            <section id="trip-style">
+                <label for="oneway">One Way</label>
+                <input type="radio" id="oneway" name="tripstyle" value="oneway" required/>
+                <label for="roundtrip">Round Trip</label>
+                <input type="radio" id="roundtrip" name="tripstyle" value="roundtrip"/>
+            </section>
+
+            <!-- DEPARTURE AND RETURN DATES -->
+            <section id="trip-dates">
+                <label for="departure-date">Departure Date:</label>
+                <input type="text" id="departure-date" name="departure-date" placeholder="mm/dd/yyyy" required>
+                <label for="return-date">Return Date:</label>
+                <input type="text" id="return-date" name="return-date" placeholder="mm/dd/yyyy">
+            </section>
+
+            <!-- FROM AND TO DESTINATIONS -->
+            <section id="destination-locations">
+                <label for="from-location">From:</label>
+                <input type="text" id="from-location" name="from-location" placeholder="Enter your current city here..." required>
+                <label for="to-destination">To:</label>
+                <input type="text" id="to-destination" name="to-destination" placeholder="Enter your destination city here..." required>
+            </section>
+
+            <!-- BOOKING CONTACT NAME -->
+            <section id="contact-name">
+                <label for="booking-name">Your Name:</label>
+                <input type="text" id="booking-name" name="booking-name" placeholder="Enter your name here..." required>
+            </section>
+
+            <!-- BOOKING CONTACT DETAILS (PHONE AND EMAIL) -->
+            <section id="contact-details">
+                <label for="contact-email">Email:</label>
+                <input type="text" id="contact-email" name="contact-email" placeholder="Enter your email here..." required>
+                <label for="contact-phone">Phone:</label>
+                <input type="text" id="contact-phone" name="contact-phone" placeholder="Enter your phone number here..." required>
+            </section>
+
+            <!-- BOOKING ADDRESS DETAILS -->
+            <section id="address-details">
+                <label for="street-address">Street Address:</label>
+                <input type="text" id="street-address" name="street-address" placeholder="Enter your street address here..." required>
+                <label for="city/suburb">City/Suburb:</label>
+                <input type="text" id="city/suburb" name="city/suburb" placeholder="Enter your city/suburb here..." required><br>
+                <label for="state/province">State/Province:</label>
+                <input type="text" id="state/province" name="state/province" placeholder="Enter your state/province here..." required>
+                <label for="zip/postcode">Zip/Postcode:</label>
+                <input type="text" id="zip/postcode" name="zip/postcode" placeholder="Enter your zip/postcode here..." required>
+            </section>
+
+            <!-- PASSENGER DETAILS -->
+            <section id="passengers">
+                <h3>Passengers:</h3>
+                <section id="passenger1-details">
+                    <label for="passenger-1">P1:</label>
+                    <input type="text" id="passenger-1" name="passenger-p1" placeholder="Full name on passport..." required><br>
+                    <label>Gender:</label>
+                    <label for="male-p1">Male</label>
+                    <input type="radio" id="male-p1" name="gender-p1" value="Male" required>
+                    <label for="female-p1">Female</label>
+                    <input type="radio" id="female-p1" name="gender-p1" value="Female" required><br>
+                    <label for="age">Age:</label>
+                    <input type="text" name="age-p1" id="age-p1" placeholder="Age on passport..." required>
+                </section>
+
+                <section id="passenger2-details">
+                    <label for="passenger-2">P2:</label>
+                    <input type="text" id="passenger-2" name="passenger-p2" placeholder="Full name on passport..."><br>
+                    <label>Gender:</label>
+                    <label for="male-p2">Male</label>
+                    <input type="radio" id="male-p2" name="gender-p2" value="Male">
+                    <label for="female-p2">Female</label>
+                    <input type="radio" id="female-p2" name="gender-p2" value="Female"><br>
+                    <label for="age">Age:</label>
+                    <input type="text" name="age-p2" id="age-p2" placeholder="Age on passport...">
+                </section>
+
+                <section id="passenger3-details">
+                    <label for="passenger-3">P3:</label>
+                    <input type="text" id="passenger-3" name="passenger-p3" placeholder="Full name on passport..."><br>
+                    <label>Gender:</label>
+                    <label for="male-p3">Male</label>
+                    <input type="radio" id="male-p3" name="gender-p3" value="Male">
+                    <label for="female-p3">Female</label>
+                    <input type="radio" id="female-p3" name="gender-p3" value="Female"><br>
+                    <label for="age">Age:</label>
+                    <input type="text" name="age-p3" id="age-p3" placeholder="Age on passport...">
+                </section>
+
+            <!-- MEALS -->
+            <section id="meal-types">
+                <label for="meals">Choose your meals:</label>
+                <select name="meals" id="meals">
+                    <option value="standard">Standard</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="asian">Asian</option>
+                    <option value="vegan">Vegan</option>
+                </select>
+            </section>
+
+            <!-- PAYMENT INFORMATION -->
+            <section id="payment-information">
+                <label for="payment-option">Select your payment option:</label>
+                <select name="payment-option" id="payment-option" required>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="POLi">POLi</option>
+                    <option value="BPAY">BPAY</option>
+                    <option value="PayPal">PayPal</option>
+                </select><br>
+
+                <label for="cc-name">Name on Credit Card:</label>
+                <input type="text" name="cc-name" id="cc-name" placeholder="Enter name here:">
+                <label for="cc-number">Credit Card Number:</label>
+                <input id="cc-number" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"><br>
+                <label for="cc-expdate">Expiry Date:</label>
+                <input type="text" name="cc-expdate" id="cc-expdate" placeholder="mm/yy">
+                <label for="cc-cvv">CVV:</label>
+                <input type="text" name="cc-cvv" id="cc-cvv" placeholder="Enter CVV here...">
+            </section>
+
+            <!-- SUBMIT -->
+            <section id="form-footer">
+                <input type="submit" id="submit-button" value="Make Booking" onclick="submitForm()">
+            </section>      
+        </form>
+    </section>
+
+    <!-- SCRIPTS -->
     <script src="./scripts/validation.js"></script>
-  </body>
+
+</body>
 </html>
