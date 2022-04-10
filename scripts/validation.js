@@ -39,6 +39,16 @@ function validAge(age) {
   return errorFree;
 }
 
+function validName(name) {
+  let errorFree = true;
+
+  if (name.length < 6 && name !== "") {
+    errorFree = false;
+  }
+
+  return errorFree;
+}
+
 function validCCExpiry(dateStr) {
 
   let errorFree = true;
@@ -82,6 +92,9 @@ function validateForm() {
     const age_p1 = document.getElementById("age-p1");
     const age_p2 = document.getElementById("age-p2");
     const age_p3 = document.getElementById("age-p3");
+    const name_p1 = document.getElementById("passenger-1")
+    const name_p2 = document.getElementById("passenger-2");
+    const name_p3 = document.getElementById("passenger-3");
     const cc_expdate = document.getElementById("cc-expdate");
     const cc_cvv = document.getElementById("cc-cvv");
     const return_trip = document.querySelector('input[name="tripstyle"]:checked').value;
@@ -125,6 +138,24 @@ function validateForm() {
     if (!validAge(age_p3.value) && age_p3.value !== "") {
       alert("Passenger 3's age must be between 1 to 99");
       age_p3.focus();
+      return false;
+    }
+
+    if (!validName(name_p1.value)) {
+      alert("Passenger 1's name must be longer than 5 characters")
+      name_p1.focus();
+      return false;
+    }
+
+    if (!validName(name_p2.value)) {
+      alert("Passenger 2's name must be longer than 5 characters")
+      name_p2.focus();
+      return false;
+    }
+
+    if (!validName(name_p3.value)) {
+      alert("Passenger 3's name must be longer than 5 characters")
+      name_p3.focus();
       return false;
     }
     
