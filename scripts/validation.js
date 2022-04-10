@@ -71,7 +71,6 @@ function validCCV(num) {
     errorFree = false;
   }
   return errorFree;
-
 }
 
 // validate the whole form
@@ -85,6 +84,7 @@ function validateForm() {
     const age_p3 = document.getElementById("age-p3");
     const cc_expdate = document.getElementById("cc-expdate");
     const cc_cvv = document.getElementById("cc-cvv");
+    const return_trip = document.querySelector('input[name="tripstyle"]:checked').value;
 
     if (!dateIsValid(departure_date.value)) {
       alert("Invalid departure date");
@@ -92,7 +92,7 @@ function validateForm() {
       return false;
     }
     
-    if (!dateIsValid(return_date.value)) {
+    if (!dateIsValid(return_date.value) && return_trip === "roundtrip") {
       alert("Invalid return date");
       return_date.focus();
       return false;  
@@ -111,25 +111,25 @@ function validateForm() {
     }
     
     if (!validAge(age_p1.value)) {
-      alert("Passenger 1's age must be between 1 t0 99");
+      alert("Passenger 1's age must be between 1 to 99");
       age_p1.focus();
       return false;
     }
     
-    if (!validAge(age_p2.value)) {
-      alert("Passenger 2's age must be between 1 t0 99");
+    if (!validAge(age_p2.value) && age_p2.value !== "") {
+      alert("Passenger 2's age must be between 1 to 99");
       age_p2.focus();
       return false;
     }
     
-    if (!validAge(age_p3.value)) {
-      alert("Passenger 3's age must be between 1 t0 99");
+    if (!validAge(age_p3.value) && age_p3.value !== "") {
+      alert("Passenger 3's age must be between 1 to 99");
       age_p3.focus();
       return false;
     }
     
     if (!validCCExpiry(cc_expdate.value)) {
-      alert("Invalid credit card expiryd date.  Must be mm/yy.");
+      alert("Invalid credit card expiry date.  Must be mm/yy.");
       cc_expdate.focus();
       return false;
     }
@@ -141,4 +141,10 @@ function validateForm() {
     }
 
     return true;
+}
+
+function submitForm() {
+  if (validateForm() === true) {
+    alert('Form submitted successfully!')
+  }
 }

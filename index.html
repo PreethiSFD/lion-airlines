@@ -33,7 +33,7 @@
             <!-- TRIP STYLE -->
             <section id="trip-style">
                 <label for="oneway">One Way</label>
-                <input type="radio" id="oneway" name="tripstyle" value="oneway">
+                <input type="radio" id="oneway" name="tripstyle" value="oneway" required/>
                 <label for="roundtrip">Round Trip</label>
                 <input type="radio" id="roundtrip" name="tripstyle" value="roundtrip"/>
             </section>
@@ -43,7 +43,7 @@
                 <label for="departure-date">Departure Date:</label>
                 <input type="text" id="departure-date" name="departure-date" placeholder="mm/dd/yyyy" required>
                 <label for="return-date">Return Date:</label>
-                <input type="text" id="return-date" name="return-date" placeholder="mm/dd/yyyy" required>
+                <input type="text" id="return-date" name="return-date" placeholder="mm/dd/yyyy">
             </section>
 
             <!-- FROM AND TO DESTINATIONS -->
@@ -92,7 +92,7 @@
                     <label for="female-p1">Female</label>
                     <input type="radio" id="female-p1" name="gender-p1" value="Female" required><br>
                     <label for="age">Age:</label>
-                    <input type="text" name="age-p1" id="age" placeholder="Age on passport..." required>
+                    <input type="text" name="age-p1" id="age-p1" placeholder="Age on passport..." required>
                 </section>
 
                 <section id="passenger-2">
@@ -104,7 +104,7 @@
                     <label for="female-p2">Female</label>
                     <input type="radio" id="female-p2" name="gender-p2" value="Female"><br>
                     <label for="age">Age:</label>
-                    <input type="text" name="age-p2" id="age" placeholder="Age on passport...">
+                    <input type="text" name="age-p2" id="age-p2" placeholder="Age on passport...">
                 </section>
 
                 <section id="passenger-3">
@@ -116,7 +116,7 @@
                     <label for="female-p3">Female</label>
                     <input type="radio" id="female-p3" name="gender-p3" value="Female"><br>
                     <label for="age">Age:</label>
-                    <input type="text" name="age-p3" id="age" placeholder="Age on passport...">
+                    <input type="text" name="age-p3" id="age-p3" placeholder="Age on passport...">
                 </section>
 
             <!-- MEALS -->
@@ -133,7 +133,7 @@
             <!-- PAYMENT INFORMATION -->
             <section id="payment-information">
                 <label for="payment-option">Select your payment option:</label>
-                <select name="payment-option" id="payment-option">
+                <select name="payment-option" id="payment-option" required>
                     <option value="Credit Card">Credit Card</option>
                     <option value="POLi">POLi</option>
                     <option value="BPAY">BPAY</option>
@@ -152,7 +152,7 @@
 
             <!-- SUBMIT -->
             <section id="form-footer">
-                <input type="submit" id="submit-button" value="Make Booking" onclick="checkEmail()">
+                <input type="submit" id="submit-button" value="Make Booking" onclick="submitForm()">
             </section>      
         </form>
     </section>
