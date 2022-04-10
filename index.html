@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Booking Form</title>
-    <link rel="stylesheet" type="text/css" href="./stylewip.css"/>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
 </head>
 <body>
     <!-- NAVIGATION BAR -->
@@ -28,8 +28,8 @@
     <!-- BOOKING FORM -->
     <section class="form-container">
         <h4>MAKE A BOOKING</h4>
+        <form method="post" action="/" id="booking-form" onsubmit="return false">
 
-        <form method="post" action="/" id="booking-form">
             <!-- TRIP STYLE -->
             <section id="trip-style">
                 <label for="oneway">One Way</label>
@@ -152,7 +152,7 @@
 
             <!-- SUBMIT -->
             <section id="form-footer">
-                <input type="submit" id="submit-button" value="Make Booking">
+                <input type="submit" id="submit-button" value="Make Booking" onclick="checkEmail()">
             </section>      
         </form>
     </section>
