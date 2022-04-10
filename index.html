@@ -143,7 +143,7 @@
                 <label for="cc-name">Name on Credit Card:</label>
                 <input type="text" name="cc-name" id="cc-name" placeholder="Enter name here:">
                 <label for="cc-number">Credit Card Number:</label>
-                <input type="number" name="cc-number" id="cc-number" placeholder="Enter number here:"><br>
+                <input id="cc-number" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"><br>
                 <label for="cc-expdate">Expiry Date:</label>
                 <input type="text" name="cc-expdate" id="cc-expdate" placeholder="mm/yy">
                 <label for="cc-cvv">CVV:</label>
