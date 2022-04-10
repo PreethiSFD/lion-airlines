@@ -118,7 +118,6 @@ function validateForm() {
     
     if (!validAge(age_p2.value) && age_p2.value !== "") {
       alert("Passenger 2's age must be between 1 to 99");
-      console.log(age_p2.value);
       age_p2.focus();
       return false;
     }
