@@ -1,0 +1,44 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    background-color:#151515;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+}
+
+.image-container {
+    grid-row: 1/2;
+    text-align: center;
+}
+
+.success {
+    color: #fff;
+    font-size: 30px;
+    grid-row: 2/3;
+    text-align:center;
+}
+
+.return {
+    grid-row: 3/4;
+    text-align:center;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: none;
+    width: 20vw;
+    height: 10vh;
+    border-radius: 40px;
+    font-size: 20px;
+    color: #fff;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
