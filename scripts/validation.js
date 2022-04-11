@@ -188,6 +188,6 @@ function validateForm() {
       cc_cvv.focus();
       return false;
     }
-    console.log('Form submitted successfully!')
+    console.log('Form submitted successfully!');
     return true;
 }
