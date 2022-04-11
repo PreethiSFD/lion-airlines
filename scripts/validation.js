@@ -95,6 +95,9 @@ function validateForm() {
     const name_p1 = document.getElementById("passenger-1")
     const name_p2 = document.getElementById("passenger-2");
     const name_p3 = document.getElementById("passenger-3");
+    const payment_option = document.querySelector("#payment-option").value;
+    const cc_name = document.querySelector("#cc-name").value;
+    const cc_name_element = document.getElementById("cc-name");
     const cc_expdate = document.getElementById("cc-expdate");
     const cc_cvv = document.getElementById("cc-cvv");
     const return_trip = document.querySelector('input[name="tripstyle"]:checked').value;
@@ -158,24 +161,24 @@ function validateForm() {
       name_p3.focus();
       return false;
     }
+
+    if (cc_name === "" && payment_option === "Credit Card") {
+      alert("Name on credit card cannot be blank");
+      cc_name_element.focus();
+      return false; 
+    }
     
-    if (!validCCExpiry(cc_expdate.value)) {
+    if (!validCCExpiry(cc_expdate.value) && payment_option === "Credit Card") {
       alert("Invalid credit card expiry date.  Must be mm/yy.");
       cc_expdate.focus();
       return false;
     }
 
-    if (!validCCV(cc_cvv.value)) {
+    if (!validCCV(cc_cvv.value) && payment_option === "Credit Card") {
       alert("CCV must be from 1 to 999");
       cc_cvv.focus();
       return false;
     }
-
+    console.log('Form submitted successfully!')
     return true;
-}
-
-function submitForm() {
-  if (validateForm() === true) {
-    alert('Form submitted successfully!')
-  }
 }

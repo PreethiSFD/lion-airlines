@@ -28,7 +28,7 @@
     <!-- BOOKING FORM -->
     <section class="form-container">
         <h4>MAKE A BOOKING</h4>
-        <form method="post" action="/" id="booking-form" onsubmit="return false">
+        <form method="post" action="/" id="booking-form" onsubmit="return validateForm()">
 
             <!-- TRIP STYLE -->
             <section id="trip-style">
@@ -152,7 +152,7 @@
 
             <!-- SUBMIT -->
             <section id="form-footer">
-                <input type="submit" id="submit-button" value="Make Booking" onclick="submitForm()">
+                <input type="submit" id="submit-button" value="Make Booking">
             </section>      
         </form>
     </section>
