@@ -98,6 +98,8 @@ function validateForm() {
     const payment_option = document.querySelector("#payment-option").value;
     const cc_name = document.querySelector("#cc-name").value;
     const cc_name_element = document.getElementById("cc-name");
+    const cc_number = document.querySelector("#cc-number").value;
+    const cc_number_element = document.getElementById("cc-number");
     const cc_expdate = document.getElementById("cc-expdate");
     const cc_cvv = document.getElementById("cc-cvv");
     const return_trip = document.querySelector('input[name="tripstyle"]:checked').value;
@@ -167,6 +169,13 @@ function validateForm() {
       cc_name_element.focus();
       return false; 
     }
+
+    if (cc_number === "" && payment_option === "Credit Card") {
+      alert("Credit card number cannot be blank");
+      cc_number_element.focus();
+      return false; 
+    }
+
     
     if (!validCCExpiry(cc_expdate.value) && payment_option === "Credit Card") {
       alert("Invalid credit card expiry date.  Must be mm/yy.");
