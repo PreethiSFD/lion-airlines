@@ -202,3 +202,7 @@ a:visited {
 a:hover {
     color: #ffdf2d;
 }
+
+a {
+  text-decoration: none;
+}
