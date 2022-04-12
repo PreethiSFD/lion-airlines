@@ -46,16 +46,43 @@ a {
   text-decoration: none;
 }
 
-#main-image {
-    grid-row: 2/4;
-    grid-column:1/4;
-    background-image: url(imgs/wanderlust-full.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; 
+#value {
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 
-img {
-    padding-left: 25vw;
-    width: 50vw;
-    padding-top: 10vh;
+p {
+    padding-top:20px;
+}
+
+#segments {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    color: #fff;
+
+}
+
+#segment1 {
+    grid-column: 1/2;
+    border-right: 1px solid #ffdf2d;
+    grid-row: 1/2;
+    margin-left: 20px;
+    padding-right: 30px;
+}
+
+#segment2 {
+    grid-column: 2/3;
+    border-right: 1px solid #ffdf2d;
+    grid-row: 1/2;
+    margin-left: 20px;
+    padding-right: 30px;
+}
+
+#segment3 {
+    grid-column: 3/4;
+    margin-left: 20px;
+    padding-right: 30px;
 }

@@ -46,16 +46,11 @@ a {
   text-decoration: none;
 }
 
-#main-image {
+#error-404 {
+    text-align: center;
     grid-row: 2/4;
-    grid-column:1/4;
-    background-image: url(imgs/wanderlust-full.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; 
-}
-
-img {
-    padding-left: 25vw;
-    width: 50vw;
-    padding-top: 10vh;
+    grid-column: 1/4;
+    margin: 20vh;
+    color: #ffdf2d;
+    font-size: 80px;
 }
