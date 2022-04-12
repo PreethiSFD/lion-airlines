@@ -191,3 +191,17 @@ function validateForm() {
     console.log('Form submitted successfully!');
     return true;
 }
+
+var tripStyleRadios = document.querySelectorAll('[name=tripstyle]');
+Array.from(tripStyleRadios).forEach(function(r){
+  r.addEventListener('click', function(){
+    var returDt = document.getElementById('return-date');
+	var returDtVal = document.querySelector('input[name="tripstyle"]:checked').value
+    if( returDtVal == "roundtrip")
+      returDt.removeAttribute('disabled');
+    else{
+      document.getElementById('return-date').value='';	
+      returDt.setAttribute('disabled', 'disabled');
+	}
+  });
+});
